@@ -1,0 +1,138 @@
+version: '3.8'
+
+# Расширенная версия с Nginx, Redis и Mailhog
+# Используйте эту версию для более сложных проектов
+
+services:
+  # База данных MySQL
+  db:
+    image: mysql:8.0
+    container_name: wordpress_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password_change_me}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-wordpress}
+      MYSQL_USER: ${MYSQL_USER:-wordpress}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-wordpress_password_change_me}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql-config:/etc/mysql/conf.d
+    networks:
+      - wordpress_network
+    command: '--default-authentication-plugin=mysql_native_password'
+
+  # WordPress
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    container_name: wordpress_app
+    restart: unless-stopped
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress_password_change_me}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
+      WORDPRESS_DEBUG: 'true'
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_ENVIRONMENT_TYPE', 'local');
+        define('WP_DEBUG_LOG', true);
+        define('WP_DEBUG_DISPLAY', false);
+        define('SCRIPT_DEBUG', true);
+        define('SAVEQUERIES', true);
+        
+        /* Redis Cache */
+        define('WP_REDIS_HOST', 'redis');
+        define('WP_REDIS_PORT', 6379);
+        
+        /* Mailhog SMTP */
+        define('SMTP_HOST', 'mailhog');
+        define('SMTP_PORT', 1025);
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./php-config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    networks:
+      - wordpress_network
+
+  # Nginx как reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: wordpress_nginx
+    restart: unless-stopped
+    ports:
+      - "${WORDPRESS_PORT:-8000}:80"
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./nginx-config:/etc/nginx/conf.d
+    depends_on:
+      - wordpress
+    networks:
+      - wordpress_network
+
+  # Redis для кэширования
+  redis:
+    image: redis:alpine
+    container_name: wordpress_redis
+    restart: unless-stopped
+    networks:
+      - wordpress_network
+    volumes:
+      - redis_data:/data
+
+  # phpMyAdmin
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin:latest
+    container_name: wordpress_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password_change_me}
+      UPLOAD_LIMIT: 300M
+    ports:
+      - "${PHPMYADMIN_PORT:-8080}:80"
+    networks:
+      - wordpress_network
+
+  # Mailhog для тестирования email
+  mailhog:
+    image: mailhog/mailhog
+    container_name: wordpress_mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+    networks:
+      - wordpress_network
+
+  # WP-CLI
+  wpcli:
+    depends_on:
+      - db
+      - wordpress
+    image: wordpress:cli
+    container_name: wordpress_cli
+    restart: "no"
+    user: "33:33"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress_password_change_me}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
+    volumes:
+      - ./wordpress:/var/www/html
+    networks:
+      - wordpress_network
+    command: tail -f /dev/null
+
+volumes:
+  db_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  wordpress_network:
+    driver: bridge

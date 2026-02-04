@@ -1,0 +1,22 @@
+# WordPress файлы
+wordpress/
+!wordpress/.gitkeep
+
+# Environment файлы
+.env
+
+# Database данные
+db_data/
+
+# Логи
+*.log
+
+# OS файлы
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
