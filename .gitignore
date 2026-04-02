@@ -1,6 +1,8 @@
 # WordPress файлы
 wordpress/
 !wordpress/.gitkeep
+!wordpress/wp-content/themes/
+!wordpress/wp-content/plugins/
 
 # Environment файлы
 .env
