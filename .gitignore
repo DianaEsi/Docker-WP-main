@@ -1,9 +1,3 @@
-# WordPress файлы
-wordpress/
-!wordpress/.gitkeep
-!wordpress/wp-content/themes/
-!wordpress/wp-content/plugins/
-
 # Environment файлы
 .env
 
@@ -22,3 +16,26 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+
+!.gitignore
+!readme.md
+# 3. Разрешаем папку wp-content (но пока не её содержимое)
+!/wp-content/
+
+# 4. Игнорируем всё внутри wp-content
+/wp-content/*
+
+
+# 5. Твоя тема, как её обозвала
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/aura-theme/
+
+# 6. Твой плагин, как её обозвала
+!/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/apartments-plugin/
+
+# 7. (Опционально) Разрешаем стандартный файл настроек как шаблон
+!/wp-config-sample.php
