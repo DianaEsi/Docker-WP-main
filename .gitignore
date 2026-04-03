@@ -2,6 +2,7 @@
 wordpress/*
 !wordpress/.gitkeep
 !wordpress/wp-content/
+wordpress/wp-content/*
 !wordpress/wp-content/themes/
 !wordpress/wp-content/themes/aura-theme
 
