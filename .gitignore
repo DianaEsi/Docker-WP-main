@@ -9,6 +9,7 @@ wordpress/wp-content/themes/*
 
 # Environment файлы
 .env
+.env.example
 
 # Database данные
 db_data/
