@@ -42,7 +42,7 @@ get_header();
 </section>
 <!-- Карточка услуги -->
 <section class="catalog" id="apartments">
-    <h2 class="mobile">Квартиры<span class="material-symbols-outlined">arrow_forward</span><a href="<?php echo get_permalink(14); ?>"></a></h2>
+    <h2 class="mobile">Квартиры<a href="<?php echo get_permalink(14); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow_forward.svg" alt="Стрелка" style="position: relative;left: 30%;"></a></h2>
 
     <div class="apartments">
         <article class="apartment">
@@ -81,7 +81,7 @@ get_header();
         <h3>Увеличьте доход от вашей недвижимости вместе с Aura</h3>
         <div>
             <p>Aura — управляющая компания по посуточной аренде, которая берёт на себя полное управление квартирой и помогает собственникам получать стабильный доход без лишних забот.</p>
-            <a href="<?php echo get_permalink(12); ?>" class="cooperation__button">Подробнее о сотрудничестве <span class="material-symbols-outlined">arrow_forward</span></a>
+            <a href="<?php echo get_permalink(12); ?>" class="cooperation__button">Подробнее о сотрудничестве <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow_forward.svg" alt="Стрелка вперед"></a>
         </div>
     </div>
 </section>

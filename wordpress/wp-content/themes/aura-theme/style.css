@@ -56,6 +56,8 @@ h3 {
 
     margin-left: 20px;
     margin-right: 20px;
+
+    line-height: normal;
 }
 
 p {
@@ -121,6 +123,16 @@ p {
     margin-bottom: 30px;
     list-style: none;
 }
+
+/* Скрою пока меню мобильное*/
+.container__header {
+    display: none;
+}
+
+.catalog-filter {
+    display: none;
+}
+
 
 .container__mobile-header {
     display: flex;
@@ -447,8 +459,13 @@ h3 {
 }
 
 footer a {
+    font-size: 15px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.footer p {
+    font-size: 15px;
 }
 
 .footer-column__nav {

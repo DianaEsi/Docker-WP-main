@@ -7,13 +7,9 @@
     
 <section class="catalog-filter">
     <div class="filter">
-        <div class="filter__mobile"> <span class="material-symbols-outlined">
-                page_info
-            </span>
+        <div class="filter__mobile"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/page_info.svg" alt="Инфо">
 
-        <span class="material-symbols-sharp">
-arrow_forward
-</span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow_forward.svg" alt="Стрелка" style="vertical-align: middle">
         </div>
         <button class="mobile-filter-btn" style="background: none; border: none; font-size: 16px; cursor: pointer;">Фильтры</button>
     </div>
@@ -22,10 +18,8 @@ arrow_forward
         <div class="filter-item">
             <div class="item">
                 <button class="filter-btn">
-                    Тип квартиры <span class="material-symbols-outlined">
-                        keyboard_arrow_down
-                    </span>
-
+                    Тип квартиры <img src="<?php echo get_template_directory_uri(); ?>/assets/images/keyboard_arrow_down.svg" alt="Стрелка" style="vertical-align: middle">
+                </button>
             </div>
 
             <div class="filter-dropdown">
@@ -40,10 +34,8 @@ arrow_forward
         <div class="filter-item">
             <div class="item">
                 <button class="filter-btn">
-                    Кол-во гостей <span class="material-symbols-outlined">
-                        keyboard_arrow_down
-                    </span>
-
+                    Кол-во гостей <img src="<?php echo get_template_directory_uri(); ?>/assets/images/keyboard_arrow_down.svg" alt="Стрелка" style="vertical-align: middle">
+                </button>
                     <div class="filter-dropdown">
                         <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 2</label>
                         <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 3</label>
@@ -62,13 +54,8 @@ arrow_forward
 
         <div class="filter-item">
             <div class="item">
-                <button class="filter-btn"> <span class="material-symbols-sharp">
-swap_vert
-</span>
-                    
-                    Сортировка <span class="material-symbols-outlined">
-                        keyboard_arrow_down
-                    </span>
+                <button class="filter-btn"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/swap_vert.svg" alt="Иконка" style="vertical-align: middle">
+                    Сортировка <img src="<?php echo get_template_directory_uri(); ?>/assets/images/keyboard_arrow_down.svg" alt="Стрелка" style="vertical-align: middle">
                 </button>
 
 

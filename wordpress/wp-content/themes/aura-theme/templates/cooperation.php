@@ -23,9 +23,7 @@ get_header();
     </section>
     <section class="advantages">
         <div class="advantages__head">
-            <h3>Преимущества сотрудничества с Aura <span class="material-symbols-outlined">
-arrow_downward
-</span></h3>
+            <h3>Преимущества сотрудничества с Aura <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow_downward.svg" alt="Стрелка" style="vertical-align: middle"></h3>
         </div>
         <article>
             <div>

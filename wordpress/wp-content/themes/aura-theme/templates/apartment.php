@@ -33,34 +33,47 @@ get_header();
             </div>
         </section>
         <section class="included">
-            <h2>
-                <?= get_category( 4, ARRAY_A ) ['name'] ?>
-            </h2>
+            <h2>Удобства</h2>
             <div class="included__description">
-                <?php 
-                $posts = get_posts( [
-                    'numberposts'=> -1,
-                    'category_name'=> 'included',
-                    'post_type'=> 'post',
-                    'suppres_filter'=> true,
-                ]) ;
-                foreach ( $posts as $post ) {
-                    setup_postdata( $post );
-                ?>
                 <div>
-                    <p><?php the_title(); ?></p>
+                    <p>Видео/аудио</p>
                     <ul>
-                        <?php the_content(); ?>
                         <li>Телевизор с плоским экраном</li>
                         <li>Телевизор со Smart TV</li>
                     </ul>
                 </div>
 
-                <?php
-                }
-wp_reset_postdata();
-                ?>
-
+                <div>
+                    <p>Интернет</p>
+                    <ul>
+                        <li>Wi-Fi</li>
+                        <li>Интернет</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Ванная комната</p>
+                    <ul>
+                        <li>Ванна или душевая кабина</li>
+                        <li>Тапочки</li>
+                        <li>Унитаз</li>
+                        <li>Санузел</li>
+                        <li>Туалет</li>
+                        <li>Банные принадлежности</li>
+                        <li>Гигиенические средства</li>
+                        <li>Туалетные средства</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Электроника</p>
+                    <ul>
+                        <li>Фен</li>
+                        <li>Кофемашина</li>
+                        <li>Микроволновая</li>
+                        <li>Утюг</li>
+                        <li>Плита для приготовления пищи</li>
+                        <li>Холодильник</li>
+                    </ul>
+                </div>
 
                 <div>
                     <p>Спальные места</p>
@@ -71,9 +84,10 @@ wp_reset_postdata();
                         <li>Кресло-кровать — Х шт.</li>
                     </ul>
                     <p class="notice">* Каждому гостю при заезде предоставляется чистое постельное бельё, полотенца и предметы первой необходимости.</p>
-                </div>
-                <div>
-                    <p>Мебель</p>
+                                <div>
+                    <p style="
+    margin-top: 20px;
+">Мебель</p>
                     <ul>
                         <li>Стулья</li>
                         <li>Стол</li>
@@ -87,7 +101,7 @@ wp_reset_postdata();
                         <li>Зеркало</li>
                         <li>Стул</li>
                     </ul>
-                </div>
+                </div></div>
                 <div>
                     <p>Прочее</p>
                     <ul>
@@ -110,6 +124,8 @@ wp_reset_postdata();
                         <li>Обеденная зона</li>
                     </ul>
                 </div>
+
+
             </div>
             <div>
                 <a href="">Смотреть все Удобства</a>
@@ -193,6 +209,5 @@ wp_reset_postdata();
 </div>
 
 <?php get_template_part('templates/feedback'); ?>
-
 
 <?php get_footer(); ?>
