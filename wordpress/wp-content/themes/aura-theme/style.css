@@ -994,6 +994,10 @@ input {
         margin: 0px;
     }
 
+    .apartment__location{
+            padding-left: 20px;
+    }
+
     .count,
     .square {
         gap: 10px;
@@ -1304,7 +1308,7 @@ input {
     /* Квартира */
 
     .description .apartment__info,
-    .description .apartment__location {
+    .description {
         padding-left: 150px;
 
         margin-left: 0px;
