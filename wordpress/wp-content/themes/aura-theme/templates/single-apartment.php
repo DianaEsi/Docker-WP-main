@@ -64,6 +64,7 @@ get_header();
                 <div>
                     <p>Видео/аудио</p>
                     <ul>
+                        <?php echo $tv; ?>
                         <li>Телевизор с плоским экраном</li>
                         <li>Телевизор со Smart TV</li>
                     </ul>
@@ -201,18 +202,18 @@ get_header();
                 <div class="apartment__info">
                     <div class="square">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/square.svg" alt="Площадь">
-                        <p>32 м<sup>2</sup></p>
+                        <p><?php echo $square; ?> м<sup>2</sup></p>
                     </div>
                     <div class="count">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_quest.svg" alt="Иконка человечка">
-                        <p>до 5 чел</p>
+                        <p>до <?php echo $count; ?> чел</p>
                     </div>
-                    <p>1 комн</p>
-                    <p>1 этаж</p>
+                    <p><?php echo $rooms; ?> комн</p>
+                    <p><?php echo $floor; ?> этаж</p>
                 </div>
                 <div class="apartment__location">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_location.svg" alt="Иконка локации">
-                    <p>г. Владикавказ; ул. Ген. Плиева, 17</p>
+                    <p><?php echo $address; ?></p>
                 </div>
             </div>
             <p class="card__rules">Правила проживания</p>
