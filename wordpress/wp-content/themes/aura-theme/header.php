@@ -23,8 +23,8 @@
             <div class="container__header">
                 <div class="nav">
 
-                    <nav class="nav nav__menu">
-                        <span class="material-symbols-sharp"> close </span>
+                    <nav class="nav__menu">
+                        <button class="close" style="border-style: none; background-color: unset; margin-left: 200px;"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg" alt="Закрыть"></button>
                         <?php
                         wp_nav_menu([
                             "theme_location" => "top",
@@ -35,7 +35,23 @@
                         ?>
                     </nav>
 
-                    <div class="nav nav__socials">
+                    <script>
+                        const burger = document.querySelector('.burger');
+                        const nav = document.querySelector('.nav');
+                        const close = document.querySelector('.close');
+
+                        burger.addEventListener('click', () => {
+                            nav.classList.add('active');
+                        });
+
+                        close.addEventListener('click', () => {
+                            nav.classList.remove('active');
+                        });
+
+                    </script>
+
+
+                    <div class="nav__socials">
                         <div class="nav__icons">
                             <div>
                                 <a href="https://wa.me/79288602062">

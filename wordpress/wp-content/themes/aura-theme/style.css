@@ -66,9 +66,10 @@ p {
 }
 
 .nav {
+
     position: fixed;
     top: 0;
-    right: 0px;
+    right: -250px;
 
     width: 250px;
     height: 100vh;
@@ -76,8 +77,12 @@ p {
     transition: 0.3s;
 }
 
+.nav.active {
+    right: 0px;
+}
+
 .nav__menu {
-    padding-top: 10%;
+    padding-top: 20%;
     margin-bottom: 50%;
 
 }
@@ -92,9 +97,6 @@ p {
 
 }
 
-.nav.active {
-    left: 0;
-}
 
 .nav__icons {
     display: flex;
@@ -122,15 +124,6 @@ p {
     line-height: 22px;
     margin-bottom: 30px;
     list-style: none;
-}
-
-/* Скрою пока меню мобильное*/
-.container__header {
-    display: none;
-}
-
-.catalog-filter {
-    display: none;
 }
 
 
@@ -1267,6 +1260,10 @@ input {
 
 
         justify-content: end;
+    }
+
+    .close {
+        display: none;
     }
 
     .nav__menu {
