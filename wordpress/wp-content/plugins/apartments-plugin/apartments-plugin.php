@@ -142,7 +142,6 @@ function save_apartment_data($post_id)
 		update_post_meta($post_id, 'address', $_POST['address']);
 	}
 
-
 	if (isset($_POST['tv'])) {
 		update_post_meta($post_id, 'tv', $_POST['tv']);
 	}

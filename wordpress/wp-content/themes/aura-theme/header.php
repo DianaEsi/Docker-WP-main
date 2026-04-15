@@ -15,7 +15,7 @@
     <header class="menu">
         <div class="container">
             <div class="container__mobile-header">
-                <a href="index.html">
+                <a href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_aura_png.png" alt="AURA логотип" class="logo">
                 </a>
                 <button class="burger"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/burger.svg" alt=""></button>
