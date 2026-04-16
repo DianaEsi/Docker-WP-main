@@ -20,11 +20,25 @@ if (have_posts()) : while (have_posts()) : the_post();
         $tv          = get_post_meta($apartment_id, 'amenities_tv', true);
         $bathroom    = get_post_meta($apartment_id, 'amenities_bathroom', true);
         $price       = get_post_meta($apartment_id, 'apartment_price', true);
+
+        $sleeping_places = get_post_meta($apartment_id, 'amenities_sleeping_places', true);
+        $furniture = get_post_meta($apartment_id, 'amenities_furniture', true);
+        $electronics = get_post_meta($apartment_id, 'amenities_electronics', true);
+        $other = get_post_meta($apartment_id, 'amenities_other', true);
+
+
+
+
         if (empty($price)) $price = '6 000';
 
         // Приводим к массиву
         if (!is_array($tv)) $tv = maybe_unserialize($tv);
         if (!is_array($bathroom)) $bathroom = maybe_unserialize($bathroom);
+
+        if (!is_array($sleeping_places)) $sleeping_places = maybe_unserialize($sleeping_places);
+        if (!is_array($furniture)) $furniture = maybe_unserialize($furniture);
+        if (!is_array($electronics)) $electronics = maybe_unserialize($electronics);
+        if (!is_array($other)) $other = maybe_unserialize($other);
 
         // Получаем галерею
         $gallery_ids = get_post_meta($apartment_id, 'apartment_gallery', true);
@@ -84,7 +98,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 
                 <?php if (!empty($square) || !empty($count) || !empty($rooms) || !empty($floor) || !empty($address)) : ?>
                     <section class="characteristics">
-                        <h2>Характеристики</h2>
+                        <h2 style="display: none;">Характеристики</h2>
                         <div class="apartment__info">
                             <?php if (!empty($square)) : ?>
                                 <div class="square">
@@ -110,7 +124,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                     </section>
                 <?php endif; ?>
 
-                <?php if (!empty($tv) || !empty($bathroom)) : ?>
+                <?php if (!empty($tv) || !empty($bathroom) || !empty($sleeping_places) || !empty($amenities_furniture) || !empty($amenities_electronics) || !empty($amenities_other)) : ?>
                     <section class="included">
                         <h2>Удобства</h2>
                         <div class="included__description">
@@ -129,6 +143,50 @@ if (have_posts()) : while (have_posts()) : the_post();
                                     <p>Ванная комната</p>
                                     <ul>
                                         <?php foreach ($bathroom as $item) : ?>
+                                            <li><?php echo esc_html(str_replace('_', ' ', $item)); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (!empty($sleeping_places)) : ?>
+                                <div>
+                                    <p>Спальные места</p>
+                                    <ul>
+                                        <?php foreach ($sleeping_places as $item) : ?>
+                                            <li><?php echo esc_html(str_replace('_', ' ', $item)); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <p>* Каждому гостю при заезде предоставляется чистое постельное бельё, полотенца и предметы первой необходимости.</p>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($furniture)) : ?>
+                                <div>
+                                    <p>Мебель</p>
+                                    <ul>
+                                        <?php foreach ($furniture as $item) : ?>
+                                            <li><?php echo esc_html(str_replace('_', ' ', $item)); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($electronics)) : ?>
+                                <div>
+                                    <p>Электроника</p>
+                                    <ul>
+                                        <?php foreach ($electronics as $item) : ?>
+                                            <li><?php echo esc_html(str_replace('_', ' ', $item)); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (!empty($other)) : ?>
+                                <div>
+                                    <p>Прочее</p>
+                                    <ul>
+                                        <?php foreach ($other as $item) : ?>
                                             <li><?php echo esc_html(str_replace('_', ' ', $item)); ?></li>
                                         <?php endforeach; ?>
                                     </ul>
@@ -179,7 +237,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                         <p><?php echo esc_html(mb_substr($description, 0, 150)) . '...'; ?></p>
                     <?php endif; ?>
                     <div>
-                        <div class="apartment__info">
+                        <div class="apartment__info" style="padding-left: unset;">
                             <?php if (!empty($square)) : ?>
                                 <div class="square">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/square.svg" alt="Площадь">
