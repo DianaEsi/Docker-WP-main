@@ -42,7 +42,7 @@ body {
     font-style: Regular;
     line-height: 23px;
     background-color: #fcfeff;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 
@@ -88,7 +88,7 @@ p {
 }
 
 .nav__menu span {
-    display: flex; 
+    display: flex;
     justify-content: end;
 }
 
@@ -289,7 +289,7 @@ h2 {
 .apartment__info p {
     font-size: 15px;
     margin: 0 15px 0 15px;
-    
+
 }
 
 .apartment__price {
@@ -498,6 +498,103 @@ a {
     margin-top: 50px;
     color: #eef1f4;
     margin-bottom: 20px;
+}
+
+/*Бронирование */
+
+#hr-widget .search__input-mobile[data-v-2baa32dd] {
+    display: none !important;
+}
+
+#hr-widget .search__container[data-v-2baa32dd] {
+    display: grid !important;
+    gap: 10px !important;
+
+    background-color: unset !important;
+
+    height: max-content !important;
+
+}
+
+
+#hr-widget .button-primary.big[data-v-3fccc16b]{
+    background-color: #486078 !important;
+    align-items: center;
+        justify-content: center !important;
+}
+
+#hr-widget .select__input>svg {
+    order: 1 !important;
+}
+#hr-widget .search__input>svg[data-v-2baa32dd] {
+    order: 1 !important;
+}
+
+#hr-widget .hide-mobile[data-v-2baa32dd] {
+    display: flex !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+
+    border: 2px solid #486078CC !important;
+
+    justify-content: space-between !important;
+
+}
+
+#hr-widget .custom-calendar .search .search-icon[data-v-2baa32dd] {
+    display: none !important;
+}
+
+#hr-widget .search__input-mobile[data-v-2baa32dd] {
+    display: none !important;
+}
+
+#hr-widget .search__calendar[data-v-2baa32dd] {
+    display: grid !important;
+    gap: 10px !important;
+}
+
+.booking-title {
+    display: none !important;
+}
+
+.booking {
+    background-color: unset !important;
+}
+
+
+#hr-widget svg.select__arrow {
+    display: none !important;
+}
+
+/*Бегущая строка*/
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: unset;
+    margin-top: 20px;
+}
+
+.marquee-text {
+    /*display: inline-block;*/
+
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+    color: #486078;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-150%, 0);
+    }
 }
 
 /* Фильтр */
@@ -960,6 +1057,7 @@ input {
     .apartment {
         width: auto;
         margin-left: 0px;
+        height: unset;
     }
 
     .apartments {
@@ -989,8 +1087,8 @@ input {
         margin: 0px;
     }
 
-    .apartment__location{
-            padding-left: 20px;
+    .apartment__location {
+        padding-left: 20px;
     }
 
     .count,
@@ -1002,6 +1100,9 @@ input {
 
         font-size: 18px;
         line-height: 27px;
+        position: absolute;
+
+        width: ;
     }
 
     .handshake {
@@ -1187,6 +1288,99 @@ input {
         gap: 10px;
     }
 
+    /*Бронирование */
+
+    #hr-widget .search__container[data-v-2baa32dd] {
+        display: flex !important;
+        background-color: unset !important;
+        padding: 15px !important;
+        height: max-content !important;
+        max-width: unset !important;
+        gap: 15px !important;
+        margin-left: 10em !important;
+    }
+
+    #hr-widget .hide-mobile[data-v-2baa32dd] {
+     display: flex !important; 
+    border-radius: 15px !important; 
+     width: 50% !important; 
+     border: unset !important;
+    }
+
+    #hr-widget .custom-calendar .search__input-button[data-v-2baa32dd] {
+        background-color: #486078 !important;
+        left: 0px !important;
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        height: auto !important;
+        width: 50% !important; 
+
+    }
+
+
+    #hr-widget .button-content[data-v-3fccc16b] {
+        font-size: 18px !important;
+    }
+
+    #hr-widget .custom-calendar .search__input_first[data-v-2baa32dd],
+    #hr-widget .custom-calendar .search__input[data-v-2baa32dd],
+    #hr-widget .select__input_last {
+        border-radius: 15px !important;
+        width: 50% !important;
+    }
+
+    #hr-widget .custom-calendar .search__calendar[data-v-2baa32dd] {
+       
+        display: flex !important;
+        justify-content: space-around !important;
+        gap: 15px !important;
+        border-radius: 10px !important;
+    }
+
+    #hr-widget .custom-calendar .search__input-button[data-v-2baa32dd] {
+        height: auto !important;
+        border-radius: 15px !important;
+        margin: 0px !important;
+    }
+
+    .booking__section {
+        display: flex !important;
+        align-items: center !important;
+        background-color: #FFFFFF4D !important;
+        border-radius: 15px !important;
+        padding-left: 15px !important;
+    }
+    .booking {
+        background-color: #486078 !important;
+        margin-top: 20px;
+    }
+
+    #hr-widget {
+        flex-grow: 1 !important;
+    }
+
+    .booking-title {
+        display: unset !important;
+        margin: 0px !important;
+        font-size: 30px !important;
+    }
+
+    /*Бегущая строка*/
+
+    .marquee-container {
+        background-color: #486078;
+        margin-top: 10px;
+        
+    }
+
+    .marquee-text {
+        gap: 20em;
+        color: #eef1f4;
+    }
+
+    .marquee-text span {
+        font-size: 12px;
+    }
 
     /*Сотрудничество */
 
