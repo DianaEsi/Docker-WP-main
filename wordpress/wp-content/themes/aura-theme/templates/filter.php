@@ -48,7 +48,7 @@
 
         <div class="filter-item">
             <div class="item">
-                <button class="filter-btn"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/swap_vert.svg" alt="Иконка" style="vertical-align: middle">
+                <button class="filter-btn"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/swap_vert.svg" alt="Иконка" style="vertical-align: middle" class="swap_vert">
                     Сортировка <img src="<?php echo get_template_directory_uri(); ?>/assets/images/keyboard_arrow_down.svg" alt="Стрелка" style="vertical-align: middle">
                 </button>
 

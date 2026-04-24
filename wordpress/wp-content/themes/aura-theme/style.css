@@ -617,9 +617,10 @@ a {
 }
 
 .filter-dropdown {
+    position:relative;
     display: grid;
+    gap: 5px;
 }
-
 
 
 .filter-btn,
@@ -648,8 +649,6 @@ a {
     padding-right: 15px;
     padding-bottom: 10px;
     padding-left: 15px;
-
-
 }
 
 .filter-item {
@@ -676,6 +675,10 @@ a {
     display: flex;
     justify-content: space-between;
     padding-right: 15px;
+}
+
+.swap_vert {
+    display: none;
 }
 
 
@@ -1353,6 +1356,8 @@ input {
     .booking {
         background-color: #486078 !important;
         margin-top: 20px;
+        margin-left: 150px;
+        margin-right: 150px;
     }
 
     #hr-widget {
