@@ -9,7 +9,9 @@ get_header();
 <div class="catalog-page">
     <h1 class="">Выберите квартиру для комфортного проживания</h1>
 
-<?php get_template_part('templates/filter'); ?>
+    <?php get_template_part('templates/booking'); ?>
+
+    <?php get_template_part('templates/filter'); ?>
     <!-- Карточка услуги -->
     <section class="catalog">
         <div class="apartments">

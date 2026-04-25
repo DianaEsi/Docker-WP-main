@@ -13,32 +13,9 @@ get_header();
     <p>Посуточная аренда квартир во Владикавказе</p>
 </main>
 
-<section class="booking">
-
-    <div class="booking__section">
-
-        <h2 class="booking-title">Бронирование</h2>
-
-        <div id="hr-widget"></div>
-        <script type="module" src="https://homereserve.ru/widget.js"></script>
-        <script type="module">
-            window.homereserve.initWidgetSearch({
-                "token": "thEoIlQkYg"
-            })
-        </script>
-    </div>
+<?php get_template_part('templates/booking'); ?>
 
 
-    <div class="marquee-container">
-        <div class="marquee-text">
-            <span>Высокий уровень сервиса </span>
-            <span>Актуальные цены</span>
-            <span>Отсутствие скрытых платежей</span>
-        </div>
-
-    </div>
-
-</section>
 <!-- О нас -->
 <section class="about">
     <div class="about_column-1">
