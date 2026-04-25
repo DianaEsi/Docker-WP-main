@@ -216,13 +216,13 @@ h2 {
 
 .apartment {
 
-    height: max-content;
+    
     padding-bottom: 15px;
 
     border-radius: 10px;
     margin-left: 20px;
 
-    width: 25em;
+    width: 28em;
     background-color: #fcfeff;
 }
 
@@ -302,6 +302,7 @@ h2 {
 }
 
 .more {
+    display: block;
     margin-top: 10px;
 
     width: -webkit-fill-available;
@@ -321,6 +322,8 @@ h2 {
     margin-right: 15px;
 
     color: #fcfeff;
+
+    text-align: center;
 
 }
 
@@ -1058,7 +1061,7 @@ input {
 
 
     .apartment {
-        width: auto;
+        width: unset;
         margin-left: 0px;
         height: unset;
     }
@@ -1103,9 +1106,6 @@ input {
 
         font-size: 18px;
         line-height: 27px;
-        position: absolute;
-
-        width: ;
     }
 
     .handshake {

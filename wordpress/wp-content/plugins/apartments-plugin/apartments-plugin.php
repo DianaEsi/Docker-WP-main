@@ -262,14 +262,14 @@ function save_apartment_data($post_id)
 
 
     if (isset($_POST['amenities_electronics']) && is_array($_POST['amenities_electronics'])) {
-        update_post_meta($post_id, 'amenities_electronics', array_map('amenities_electronics', $_POST['amenities_electronics']));
+        update_post_meta($post_id, 'amenities_electronics', array_map('sanitize_text_field', $_POST['amenities_electronics']));
     } else {
         delete_post_meta($post_id, 'amenities_electronics');
     }
 
 
     if (isset($_POST['amenities_other']) && is_array($_POST['amenities_other'])) {
-        update_post_meta($post_id, 'amenities_other', array_map('amenities_other', $_POST['amenities_other']));
+        update_post_meta($post_id, 'amenities_other', array_map('sanitize_text_field', $_POST['amenities_other']));
     } else {
         delete_post_meta($post_id, 'amenities_other');
     }

@@ -34,7 +34,6 @@ if (have_posts()) : while (have_posts()) : the_post();
         // Приводим к массиву
         if (!is_array($tv)) $tv = maybe_unserialize($tv);
         if (!is_array($bathroom)) $bathroom = maybe_unserialize($bathroom);
-
         if (!is_array($sleeping_places)) $sleeping_places = maybe_unserialize($sleeping_places);
         if (!is_array($furniture)) $furniture = maybe_unserialize($furniture);
         if (!is_array($electronics)) $electronics = maybe_unserialize($electronics);
@@ -124,7 +123,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                     </section>
                 <?php endif; ?>
 
-                <?php if (!empty($tv) || !empty($bathroom) || !empty($sleeping_places) || !empty($amenities_furniture) || !empty($amenities_electronics) || !empty($amenities_other)) : ?>
+                <?php if (!empty($tv) || !empty($bathroom) || !empty($sleeping_places) || !empty($furniture) || !empty($electronics) || !empty($other)) : ?>
                     <section class="included">
                         <h2>Удобства</h2>
                         <div class="included__description">

@@ -28,8 +28,6 @@
 
                 <?php endif; ?>
 
-
-
                 <button class="burger"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/burger.svg" alt=""></button>
             </div>
             <div class="container__header">
