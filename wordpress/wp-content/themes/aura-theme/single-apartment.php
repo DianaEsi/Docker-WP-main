@@ -20,13 +20,10 @@ if (have_posts()) : while (have_posts()) : the_post();
         $tv          = get_post_meta($apartment_id, 'amenities_tv', true);
         $bathroom    = get_post_meta($apartment_id, 'amenities_bathroom', true);
         $price       = get_post_meta($apartment_id, 'apartment_price', true);
-
         $sleeping_places = get_post_meta($apartment_id, 'amenities_sleeping_places', true);
         $furniture = get_post_meta($apartment_id, 'amenities_furniture', true);
         $electronics = get_post_meta($apartment_id, 'amenities_electronics', true);
         $other = get_post_meta($apartment_id, 'amenities_other', true);
-
-
 
 
         if (empty($price)) $price = '6 000';

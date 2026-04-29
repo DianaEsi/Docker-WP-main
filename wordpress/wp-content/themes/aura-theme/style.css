@@ -429,6 +429,12 @@ h3 {
     margin-left: 10px;
 }
 
+.rating {
+    margin-left: 10px !important;
+
+    padding: 0px !important;
+}
+
 .feedback {
     margin-bottom: 60px;
 }
@@ -687,6 +693,7 @@ a {
 .apply-filter {
     display: none;
 }
+
 .apply-filter.active {
     display: block;
 
@@ -1722,7 +1729,6 @@ input {
     .card .apartment__price p {
         font-size: 30px;
         line-height: 35px;
-
     }
 
     .filter {
@@ -1733,7 +1739,7 @@ input {
 
         display: flex;
         justify-content: space-between;
-    margin-left: 0px;
+        margin-left: 0px;
         display: flex;
         flex-direction: row;
 
@@ -1798,4 +1804,18 @@ input {
         display: unset;
     }
 
+
+
+    .star {
+        margin: 0 !important;
+
+        font-size: 20px;
+        color: #ccc;
+    
+    }
+
+    .star.filled {
+        margin: 0;
+        color: gold;
+    }
 }
