@@ -65,7 +65,6 @@ if (have_posts()) : while (have_posts()) : the_post();
                     </div>
                 </div>
 
-
                 <div class="swiper main-swiper">
                     <div class="swiper-wrapper">
                         <?php foreach ($gallery_images as $img) : ?>
@@ -263,7 +262,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                     <div class="apartment__price">
                         <p>от <?php echo esc_html($price); ?> ₽<span> / 1 сутки</span></p>
                     </div>
-                    <button class="booking">Забронировать</button>
+                    <button class="booking-btn">Забронировать</button>
                 </article>
             </div>
         </div>
@@ -274,3 +273,4 @@ if (have_posts()) : while (have_posts()) : the_post();
 endif; ?>
 
 <?php get_footer(); ?>
+

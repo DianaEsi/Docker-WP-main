@@ -511,11 +511,11 @@ a {
 
 /*Бронирование */
 
-#hr-widget .search__input-mobile[data-v-2baa32dd] {
+#hr-widget .search__input-mobile  {
     display: none !important;
 }
 
-#hr-widget .search__container[data-v-2baa32dd] {
+#hr-widget .search__container {
     display: grid !important;
     gap: 10px !important;
 
@@ -525,22 +525,15 @@ a {
 
 }
 
-
-#hr-widget .button-primary.big[data-v-3fccc16b] {
-    background-color: #486078 !important;
-    align-items: center;
-    justify-content: center !important;
-}
-
 #hr-widget .select__input>svg {
     order: 1 !important;
 }
 
-#hr-widget .search__input>svg[data-v-2baa32dd] {
+#hr-widget .search__input>svg  {
     order: 1 !important;
 }
 
-#hr-widget .hide-mobile[data-v-2baa32dd] {
+#hr-widget .hide-mobile {
     display: flex !important;
     border-radius: 8px !important;
     width: 100% !important;
@@ -550,16 +543,22 @@ a {
     justify-content: space-between !important;
 
 }
+#hr-widget .custom-calendar .search__input-button
+{
+    background-color: #486078 !important;
+    align-items: center;
+    justify-content: center !important;
+}
 
-#hr-widget .custom-calendar .search .search-icon[data-v-2baa32dd] {
+#hr-widget .custom-calendar .search .search-icon {
     display: none !important;
 }
 
-#hr-widget .search__input-mobile[data-v-2baa32dd] {
+#hr-widget .search__input-mobile {
     display: none !important;
 }
 
-#hr-widget .search__calendar[data-v-2baa32dd] {
+#hr-widget .search__calendar{
     display: grid !important;
     gap: 10px !important;
 }
@@ -576,6 +575,9 @@ a {
 #hr-widget svg.select__arrow {
     display: none !important;
 }
+
+
+
 
 /*Бегущая строка*/
 
@@ -925,7 +927,7 @@ input {
 
 }
 
-.booking {
+.booking-btn, .booking {
     margin-top: 10px;
 
     width: -webkit-fill-available;
@@ -1073,6 +1075,8 @@ input {
         margin-bottom: 180px
     }
 
+
+
     .mobile {
         display: none;
     }
@@ -1080,8 +1084,6 @@ input {
     .mobile img {
         display: none;
     }
-
-
 
     .catalog {
         padding-left: 150px;
@@ -1094,7 +1096,6 @@ input {
         padding-left: unset;
         padding-right: unset;
     }
-
 
     .apartment {
         width: unset;
@@ -1129,6 +1130,10 @@ input {
         margin: 0px;
     }
 
+
+    .characteristics .apartment__location {
+        padding-left: 150px;
+    }
     .apartment__location {
         padding-left: 20px;
     }
@@ -1329,7 +1334,7 @@ input {
 
     /*Бронирование */
 
-    #hr-widget .search__container[data-v-2baa32dd] {
+    #hr-widget .search__container {
         display: flex !important;
         background-color: unset !important;
         padding: 15px !important;
@@ -1339,36 +1344,36 @@ input {
         margin-left: 10em !important;
     }
 
-    #hr-widget .hide-mobile[data-v-2baa32dd] {
+    #hr-widget .hide-mobile{
         display: flex !important;
         border-radius: 15px !important;
         width: 50% !important;
         border: unset !important;
     }
 
-    #hr-widget .custom-calendar .search__input-button[data-v-2baa32dd] {
+
+
+    #hr-widget .custom-calendar .search__input-button {
         background-color: #486078 !important;
         left: 0px !important;
         margin-left: 15px !important;
         margin-right: 15px !important;
         height: auto !important;
         width: 50% !important;
-
     }
 
-
-    #hr-widget .button-content[data-v-3fccc16b] {
+    #hr-widget .button-content {
         font-size: 18px !important;
     }
 
-    #hr-widget .custom-calendar .search__input_first[data-v-2baa32dd],
-    #hr-widget .custom-calendar .search__input[data-v-2baa32dd],
+    #hr-widget .custom-calendar .search__input_first,
+    #hr-widget .custom-calendar .search__input,
     #hr-widget .select__input_last {
         border-radius: 15px !important;
         width: 50% !important;
     }
 
-    #hr-widget .custom-calendar .search__calendar[data-v-2baa32dd] {
+    #hr-widget .custom-calendar .search__calendar {
 
         display: flex !important;
         justify-content: space-around !important;
@@ -1376,7 +1381,7 @@ input {
         border-radius: 10px !important;
     }
 
-    #hr-widget .custom-calendar .search__input-button[data-v-2baa32dd] {
+    #hr-widget .custom-calendar .search__input-button {
         height: auto !important;
         border-radius: 15px !important;
         margin: 0px !important;
