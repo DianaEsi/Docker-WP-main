@@ -13,10 +13,10 @@
                     Тип квартиры <img src="<?php echo get_template_directory_uri(); ?>/assets/images/keyboard_arrow_down.svg" alt="Стрелка" style="vertical-align: middle">
                 </button>
                 <div class="filter-dropdown">
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> Студия</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> Однокомнатная</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> Двухкомнатная</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> Трехкомнатная</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="studio" style="width: auto; box-shadow: none;"> Студия</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="one-room" style="width: auto; box-shadow: none;"> Однокомнатная</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="two-room" style="width: auto; box-shadow: none;"> Двухкомнатная</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="three-room"style="width: auto; box-shadow: none;"> Трехкомнатная</label>
                 </div>
             </div>
         </div>
@@ -28,11 +28,11 @@
                     Кол-во гостей <img src="<?php echo get_template_directory_uri(); ?>/assets/images/keyboard_arrow_down.svg" alt="Стрелка" style="vertical-align: middle">
                 </button>
                 <div class="filter-dropdown">
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 2</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 3</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 4</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 5</label>
-                    <label style="margin-bottom: 0px;"><input type="checkbox" style="width: auto; box-shadow: none;"> 6 и более</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="guests-2" style="width: auto; box-shadow: none;"> 2</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="guests-3" style="width: auto; box-shadow: none;"> 3</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="guests-4" style="width: auto; box-shadow: none;"> 4</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="guests-5" style="width: auto; box-shadow: none;"> 5</label>
+                    <label style="margin-bottom: 0px;"><input type="checkbox" value="guests-6" style="width: auto; box-shadow: none;"> 6 и более</label>
                 </div>
 
             </div>
@@ -54,17 +54,17 @@
                 <div class="filter-dropdown">
 
                     <label style="margin-bottom: 0px;">
-                        <input type="radio" name="sort" style="width: auto; box-shadow: none;">
+                        <input type="radio" name="sort" value="popular" style="width: auto; box-shadow: none;">
                         Популярное
                     </label>
 
                     <label style="margin-bottom: 0px;">
-                        <input type="radio" name="sort" style="width: auto; box-shadow: none;">
+                        <input type="radio" name="sort" value="cheaper" style="width: auto; box-shadow: none;">
                         Дешевле
                     </label>
 
                     <label style="margin-bottom: 0px;">
-                        <input type="radio" name="sort" style="width: auto; box-shadow: none;">
+                        <input type="radio" name="sort" value="expensive" style="width: auto; box-shadow: none;">
                         Дороже
                     </label>
 

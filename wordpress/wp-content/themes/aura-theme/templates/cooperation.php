@@ -8,7 +8,7 @@ get_header();
 
     <section class="request">
         <h2>Отправьте заявку, и наш менеджер с вами свяжется!</h2>
-        <form action="" method="" class="form">
+        <form action="" method="POST" class="form">
             <label>
                 <input type="email" name="user_email" placeholder="Email" required>
             </label>
@@ -18,7 +18,7 @@ get_header();
             <label>
                 <input type="tel"  name="phone_number" placeholder="Номер телефона" required>
             </label>
-            <button type="submit">Отправить заявку</button>              
+            <button type="submit" name=submit_form>Отправить заявку</button>              
         </form>
     </section>
     <section class="advantages">

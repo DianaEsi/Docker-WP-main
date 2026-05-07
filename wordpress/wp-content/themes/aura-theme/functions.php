@@ -112,3 +112,35 @@ function add_swiper_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'add_swiper_scripts');
+
+
+// ОТПРАВКА ФОРМЫ В TELEGRAM 
+
+<?php
+
+add_action('template_redirect', 'handle_telegram_form');
+
+function handle_telegram_form() {
+
+    if (!isset($_POST['submit_form'])) {
+        return; 
+    }
+
+    if (!wp_verify_nonce($_POST['telegram_nonce'], 'send_to_telegram')) {
+        wp_die('Ошибка безопасности. Обновите страницу и попробуйте снова.');
+    }
+
+
+    $email    =  sanitize_textarea_field($_POST['user_email'] ?? '');
+    $name     =  sanitize_textarea_field($_POST['username'] ?? '');
+    $phone    =  sanitize_textarea_field($_POST['phone_number'] ?? '');
+
+
+    if (empty($email) || empty($name) || empty($phone)) {
+        wp_die('Пожалуйста, заполните все поля. <a href="javascript:history.back()">Назад</a>');
+    }
+
+    
+
+
+}
