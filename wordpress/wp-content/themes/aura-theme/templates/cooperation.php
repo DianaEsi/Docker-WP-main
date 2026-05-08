@@ -18,7 +18,7 @@ get_header();
             <label>
                 <input type="tel"  name="phone_number" placeholder="Номер телефона" required>
             </label>
-            <button type="submit" name=submit_form>Отправить заявку</button>              
+            <button type="submit" name="submit_form">Отправить заявку</button>              
         </form>
     </section>
     <section class="advantages">
